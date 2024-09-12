@@ -1,11 +1,155 @@
 <?php
-// INSERT DATA HERE.
+$team = [
+    [
+        'id' => 1,
+        'name' => 'Douglas Broughton',
+        'image' => 'assets/images/profile.jpg',
+        'title' => 'Software Engineer',
+        'email' => 'broughtond1@nku.edu',
+        'phone' => '812 209 0264',
+        'linkedin' => 'linkedin.com',
+        'github' => 'github.com/doug1107',
+        'website' => 'db.com',
+        'summary' => 'As a Software Engineering student at NKU, I am passionate about leveraging my technical skills and academic knowledge to develop innovative and effective software solutions. With a strong foundation in programming languages, software development methodologies, and system design, I am adept at analyzing user requirements, designing applications, and implementing efficient code.',
+        'experience' => [
+            [
+                'position' => 'Associate',
+                'company' => 'Amazon',
+                'time' => '2021 - Present',
+                'description' => 'Transport packages',
+                'technologies' => ['Python', 'PHP', 'Java']
+            ],
+        ],
+        'skills' => [
+            'Python' => 98,
+            'PHP' => 94,
+            'Java' => 96,
+        ],
+        'education' => [
+            [
+                'degree' => 'BS in Applied Software Engineering',
+                'institution' => 'Northern Kentucky University',
+                'time' => '2021 - 2025'
+            ],
+        ],
+        'awards' => [
+            'Award 1' => '',
+            'Award 2' => ''
+        ],
+        'languages' => [
+            'English' => 'Native',
+        ],
+        'interests' => ['Sports', 'Chess', 'Watching movies'],
+        'projects' => [
+            [
+                'title' => 'Project 1',
+                'description' => 'Brief description of Project 1',
+                'link' => 'project1-link'
+            ],
+        ]
+    ],
+	// fill out the info as you did in your resume, change the id number to a number not taken yet
+	[
+        'id' => 0,
+        'name' => '',
+        'image' => 'assets/images/profile.jpg',
+        'title' => '',
+        'email' => '',
+        'phone' => '',
+        'linkedin' => '',
+        'github' => '',
+        'website' => '',
+        'summary' => '',
+        'experience' => [
+            [
+                'position' => '',
+                'company' => '',
+                'time' => '',
+                'description' => '',
+                'technologies' => ['', '', '']
+            ],
+        ],
+        'skills' => [
+            ' ' => 98,
+        ],
+        'education' => [
+            [
+                'degree' => '',
+                'institution' => '',
+                'time' => ''
+            ],
+        ],
+        'awards' => [
+            'Award 1' => '',
+            'Award 2' => ''
+        ],
+        'languages' => [
+            'English' => '',
+        ],
+        'interests' => ['', '', ''],
+        'projects' => [
+            [
+                'title' => '',
+                'description' => '',
+                'link' => ''
+            ],
+        ]
+    ],
+	[
+        'id' => 0,
+        'name' => '',
+        'image' => 'assets/images/profile.jpg',
+        'title' => '',
+        'email' => '',
+        'phone' => '',
+        'linkedin' => '',
+        'github' => '',
+        'website' => '',
+        'summary' => '',
+        'experience' => [
+            [
+                'position' => '',
+                'company' => '',
+                'time' => '',
+                'description' => '',
+                'technologies' => ['', '', '']
+            ],
+        ],
+        'skills' => [
+            ' ' => 98,
+        ],
+        'education' => [
+            [
+                'degree' => '',
+                'institution' => '',
+                'time' => ''
+            ],
+        ],
+        'awards' => [
+            'Award 1' => '',
+            'Award 2' => ''
+        ],
+        'languages' => [
+            'English' => '',
+        ],
+        'interests' => ['', '', ''],
+        'projects' => [
+            [
+                'title' => '',
+                'description' => '',
+                'link' => ''
+            ],
+        ]
+    ],
 
+];
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+$member = isset($team[$id]) ? $team[$id] : null;
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Your name's Resume</title>
+    <title><?= $member['name']; ?></title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -35,23 +179,23 @@
 		    <header class="resume-header pt-4 pt-md-0">
 			    <div class="row">
 				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="assets/images/profile.jpg" alt="">
+				        <img class="picture" src="<?= $member['image']; ?>" alt="">
 				    </div><!--//col-->
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Your name</h1>
-							    <div class="title mb-3">Your desired job title</div>
+							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?= $member['name']; ?></h1>
+							    <div class="title mb-3"><?= $member['title']; ?>e</div>
 							    <ul class="list-unstyled">
-								    <li class="mb-2"><a class="text-link" href="#"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i>your@email.com</a></li>
-								    <li><a class="text-link" href="#"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i>0123 456 78900</a></li>
+								    <li class="mb-2"><a class="text-link" href="mailto:<?= $member['email']; ?>"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i><?= $member['email']; ?></a></li>
+								    <li><a class="text-link" href=""tel:<?= $member['phone']; ?>><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i><?= $member['phone']; ?></a></li>
 							    </ul>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
 							    <ul class="resume-social list-unstyled">
-					                <li class="mb-3"><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/in/yourlink</a></li>
-					                <li class="mb-3"><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/yourhandle</a></li>
-					                <li><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fas fa-globe"></i></span>yourwebsite.com</a></li>
+					                <li class="mb-3"><a class="text-link" href="<?= $member['linkedin']; ?>"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span><?= $member['linkedin']; ?></a></li>
+					                <li class="mb-3"><a class="text-link" href="<?= $member['github']; ?>"><span class="fa-container text-center me-2"><i class="fab fa-github-alt fa-fw"></i></span><?= $member['github']; ?></a></li>
+					                <li><a class="text-link" href="</span><?= $member['website']; ?>"><span class="fa-container text-center me-2"><i class="fas fa-globe"></i></span><?= $member['website']; ?></a></li>
 							    </ul>
 						    </div><!--//secondary-info-->
 					    </div><!--//row-->
@@ -63,7 +207,7 @@
 			    <section class="resume-section summary-section mb-5">
 				    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Summary</h2>
 				    <div class="resume-section-content">
-					    <p class="mb-0">Summarise your education and professional experience here. Add a couple of fun facts. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue elit ut nisi vehicula iaculis. Integer porta nisi erat, quis gravida quam dignissim ut. Nullam tincidunt mollis finibus. Vestibulum et diam vel tellus blandit convallis non id mauris. Curabitur feugiat tincidunt ante, ut iaculis sem. Sed eleifend fringilla diam, quis vehicula tellus fringilla sed. In sagittis commodo ipsum pulvinar sagittis. Ut et turpis sit amet erat elementum convallis ac eu ipsum. Aenean varius eget mi in mollis. Integer tempus diam libero, id blandit neque aliquam non. Maecenas eleifend leo ut pellentesque bibendum. Phasellus consectetur facilisis nunc, at ultricies nisi eleifend eget. Fusce molestie et orci non pulvinar. Aenean ac tristique orci, vitae viverra mi.</p>
+					    <p class="mb-0"><?= $member['summary']; ?></p>
 				    </div>
 			    </section><!--//summary-section-->
 			    <div class="row">
@@ -72,113 +216,28 @@
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
 						    <div class="resume-section-content">
 							    <div class="resume-timeline position-relative">
+								<?php foreach ($member['experience'] as $exp): ?>
 								    <article class="resume-timeline-item position-relative pb-5">
 									    
 									    <div class="resume-timeline-item-header mb-2">
 										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">Lead Developer</h3>
-										        <div class="resume-company-name ms-auto">Startup Hub</div>
+										        <h3 class="resume-position-title font-weight-bold mb-1"><?= htmlspecialchars($exp['position']); ?></h3>
+										        <div class="resume-company-name ms-auto"><?= htmlspecialchars($exp['company']); ?></div>
 										    </div><!--//row-->
-										    <div class="resume-position-time">2023 - Present</div>
+										    <div class="resume-position-time"><?= htmlspecialchars($exp['time']); ?></div>
 									    </div><!--//resume-timeline-item-header-->
 									    <div class="resume-timeline-item-desc">
-										    <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel.</p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-										    <p>Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-										    <ul>
-											    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-											    <li>At vero eos et accusamus et iusto odio dignissimos.</li>
-											    <li>Blanditiis praesentium voluptatum deleniti atque corrupti.</li>
-											    <li>Maecenas tempus tellus eget.</li>
-										    </ul>
+										    <p><?= htmlspecialchars($exp['description']); ?></p>
 										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
 										    <ul class="list-inline">
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Angular</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Python</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">jQuery</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Webpack</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">HTML/SASS</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">PostgresSQL</span></li>
+												<?php foreach ($exp['technologies'] as $tech): ?>
+                                                    <li class="list-inline-item"><span class="badge bg-secondary badge-pill"><?= htmlspecialchars($tech); ?></span></li>
+                                                <?php endforeach; ?>
 										    </ul>
 									    </div><!--//resume-timeline-item-desc-->
 
-								    </article><!--//resume-timeline-item-->
-								    
-								    <article class="resume-timeline-item position-relative pb-5">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">Senior Software Developer</h3>
-										        <div class="resume-company-name ms-auto">Google</div>
-										    </div><!--//row-->
-										    <div class="resume-position-time">2019 - 2023</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel.</p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements</h4>
-										    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-										    <ul class="list-inline">
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">React</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Redux</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Django</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Webpack</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">HTML/SASS</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">MySQL</span></li>
-										    </ul>
-									    </div><!--//resume-timeline-item-desc-->
-
-								    </article><!--//resume-timeline-item-->
-								    
-								    <article class="resume-timeline-item position-relative pb-5">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">Co-Founder & Lead Developer</h3>
-										        <div class="resume-company-name ms-auto">To-do Lists</div>
-										    </div><!--//row-->
-										    <div class="resume-position-time">2015 - 2019</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec.</p>
-										    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-										    <ul class="list-inline">
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Django</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">JavaScript</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Node.js</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Require.js</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">HTML/SASS</span></li>
-										    </ul>
-									    </div><!--//resume-timeline-item-desc-->
-
-								    </article><!--//resume-timeline-item-->
-								    
-								    <article class="resume-timeline-item position-relative">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1">Web Developer <small class="text-muted">(Intern)</small></h3>
-										        <div class="resume-company-name ms-auto">Amazon</div>
-										    </div><!--//row-->
-										    <div class="resume-position-time">2014 - 2015</div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum.</p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-										    <ul class="list-inline">
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">Ruby on Rails</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">jQuery</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">HTML/LESS</span></li>
-											    <li class="list-inline-item"><span class="badge bg-secondary badge-pill">MongoDB</span></li>
-										    </ul>
-									    </div><!--//resume-timeline-item-desc-->
-
-								    </article><!--//resume-timeline-item-->
-								    
-								    
-							    </div><!--//resume-timeline-->
-							    
+								    </article>
+									<?php endforeach; ?>
 							    
 							    
 							    
