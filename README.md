@@ -1,6 +1,10 @@
 # ASE 230 HW1
 
-## PHP
+## Douglas Broughton, Sean Cancel, Camben Bohanan
 
-Edited the resume
+# Doug- edited index.php, created the array
+
+#
+
+#
 
