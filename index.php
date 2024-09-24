@@ -98,15 +98,15 @@ $team = [
         ]
     ],
 	[
-        'id' => 0,
-        'name' => '',
+        'id' => 3,
+        'name' => 'Camden Bohanan',
         'image' => 'assets/images/profile.jpg',
-        'title' => '',
-        'email' => '',
-        'phone' => '',
-        'linkedin' => '',
-        'github' => '',
-        'website' => '',
+        'title' => 'Junior Developer',
+        'email' => 'bohananco@gmail.com',
+        'phone' => '859-753-4122',
+        'linkedin' => 'https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin',
+        'github' => 'https://github.com/CamdenBohanan',
+        'website' => 'cb.com',
         'summary' => '',
         'experience' => [
             [
