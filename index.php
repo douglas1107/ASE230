@@ -107,14 +107,14 @@ $team = [
         'linkedin' => 'https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin',
         'github' => 'https://github.com/CamdenBohanan',
         'website' => 'cb.com',
-        'summary' => '',
+        'summary' => 'I graduated as part of the class of 2021 from Woodford County High School. I have attended Northern Kentucky University for four years, where I pursued a double major in Software Engineering and Digital Effects. I am experienced in programming languages such as Python and Java. Additionally, I have expertise in digital modeling software, including Blender and Maya, as well as proficiency with Adobe Photoshop and Adobe Illustrator.I have been a proud member of Theta Chi fraternity and the national Alpha-beta club in highschool.',
         'experience' => [
             [
-                'position' => '',
-                'company' => '',
-                'time' => '',
+                'position' => 'Production Assistant',
+                'company' => 'Oak & Moore',
+                'time' => '2023',
                 'description' => '',
-                'technologies' => ['', '', '']
+                'technologies' => ['HTML', 'Maya', 'Blender']
             ],
         ],
         'skills' => [
@@ -122,9 +122,9 @@ $team = [
         ],
         'education' => [
             [
-                'degree' => '',
-                'institution' => '',
-                'time' => ''
+                'degree' => 'BS Software Engineering',
+                'institution' => 'Northern Kentucky University',
+                'time' => '2021-2026'
             ],
         ],
         'awards' => [
@@ -134,12 +134,12 @@ $team = [
         'languages' => [
             'English' => '',
         ],
-        'interests' => ['', '', ''],
+        'interests' => ['Painting', 'Hiking', 'Reading'],
         'projects' => [
             [
-                'title' => '',
-                'description' => '',
-                'link' => ''
+                'title' => 'Road to Iowa',
+                "description' => 'In Roads to Iowa, a rebellious punk star and an up-and-coming hip-hop artist are forced to team up for a cross-country journey to Iowa. Along the way, they must navigate their clashing personalities and musical styles while facing eccentric fans, unexpected detours, and wild adventures. As they travel from city to city, they discover each other's worlds and find common ground. Will their road trip end in harmony, or will their differences derail their journey?",
+                'link' => 'RTI.com'
             ],
         ]
     ],
