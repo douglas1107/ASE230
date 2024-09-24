@@ -50,43 +50,45 @@ $team = [
     ],
 	// fill out the info as you did in your resume, change the id number to a number not taken yet
 	[
-        'id' => 0,
-        'name' => '',
-        'image' => 'assets/images/profile.jpg',
-        'title' => '',
-        'email' => '',
-        'phone' => '',
-        'linkedin' => '',
-        'github' => '',
-        'website' => '',
-        'summary' => '',
+        'id' => 2,
+        'name' => 'Sean Cancel',
+        'image' => 'https://media.licdn.com/dms/image/v2/D4E03AQFrLIvKRTVQxA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687800424400?e=1732752000&v=beta&t=DJjiZOJcg-9XbrkmY0qj-0gXkTXwK6PHgdIuZpNMeFQ',
+        'title' => 'Cybersecurity Intern',
+        'email' => 'cancels1@mymail.nku.edu',
+        'phone' => '502 500 8688',
+        'linkedin' => 'www.linkedin.com/in/seancancel',
+        'github' => 'https://github.com/cancels1',
+        'website' => 'sc.com',
+        'summary' => 'I am a motivated cybersecurity student at Northern Kentucky University, pursuing a Bachelor of Science in Cybersecurity with a current GPA of 3.25. I have experience in facility operations, customer service, and tutoring, and have held leadership roles in Theta Chi and the NKU Dodgeball Club. I am proficient in various technical skills, including Google Workspace, Microsoft Office, HTML, Linux',
         'experience' => [
             [
-                'position' => '',
-                'company' => '',
-                'time' => '',
-                'description' => '',
-                'technologies' => ['', '', '']
+                'position' => 'Facility Operations',
+                'company' => 'Northern Kentucky University',
+                'time' => 'Aug 24 - Present',
+                'description' => 'Checked out and maintained recreational equipment for students ensuring proper usage and return. Monitored the area to ensure the safety of all guests, addressing any issues promptly. Helped students with inquiries and provided excellent customer service to enhance their experience.',
+                'technologies' => ['Customer Service', 'Organization', 'Problem Response']
             ],
         ],
         'skills' => [
-            ' ' => 98,
+            'Customer Service' => 98,
+            'Organization' => 94,
+            'Problem Response' => 96,
         ],
         'education' => [
             [
-                'degree' => '',
-                'institution' => '',
-                'time' => ''
+                'degree' => 'Bachelor of Science - Cybersecurity',
+                'institution' => 'Northern Kentucky University',
+                'time' => '2023-2027'
             ],
         ],
         'awards' => [
-            'Award 1' => '',
-            'Award 2' => ''
+            'Award 1' => 'Dean list',
+            'Award 2' => 'Governor Scholars Program'
         ],
         'languages' => [
-            'English' => '',
+            'English' => 'Native',
         ],
-        'interests' => ['', '', ''],
+        'interests' => ['Basketball', 'Dodgeball', 'Reading'],
         'projects' => [
             [
                 'title' => '',
