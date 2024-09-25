@@ -25,6 +25,14 @@ $team = [
             'PHP' => 94,
             'Java' => 96,
         ],
+        'other_skills' => [
+            'Code Review', 
+            'Git', 
+            'Unit Testing', 
+            'Teamwork', 
+            'Swift', 
+            'Communication', 
+        ],
         'education' => [
             [
                 'degree' => 'BS in Applied Software Engineering',
@@ -33,11 +41,11 @@ $team = [
             ],
         ],
         'awards' => [
-            'Award 1' => '',
-            'Award 2' => ''
+            'Alter Award' => 'Award of exellence in my fraternity chapter',
         ],
         'languages' => [
             'English' => 'Native',
+            'Spanish' => 'Beginner: A1',
         ],
         'interests' => ['Sports', 'Chess', 'Watching movies'],
         'projects' => [
@@ -73,6 +81,17 @@ $team = [
             'Customer Service' => 98,
             'Organization' => 94,
             'Problem Response' => 96,
+        ],
+        'other_skills' => [
+            'DevOps', 
+            'Code Review', 
+            'Git', 
+            'Unit Testing', 
+            'Wireframing', 
+            'Sketch', 
+            'Balsamiq', 
+            'WordPress', 
+            'Shopify'
         ],
         'education' => [
             [
@@ -120,6 +139,17 @@ $team = [
         'skills' => [
             ' ' => 98,
         ],
+        'other_skills' => [
+            'DevOps', 
+            'Code Review', 
+            'Git', 
+            'Unit Testing', 
+            'Wireframing', 
+            'Sketch', 
+            'Balsamiq', 
+            'WordPress', 
+            'Shopify'
+        ],
         'education' => [
             [
                 'degree' => 'BS Software Engineering',
@@ -140,6 +170,65 @@ $team = [
                 'title' => 'Road to Iowa',
                 "description' => 'In Roads to Iowa, a rebellious punk star and an up-and-coming hip-hop artist are forced to team up for a cross-country journey to Iowa. Along the way, they must navigate their clashing personalities and musical styles while facing eccentric fans, unexpected detours, and wild adventures. As they travel from city to city, they discover each other's worlds and find common ground. Will their road trip end in harmony, or will their differences derail their journey?",
                 'link' => 'RTI.com'
+            ],
+        ]
+    ],
+    [
+        'id' => 4,
+        'name' => 'Mith Sah',
+        'image' => 'assets/images/profile.jpg',
+        'title' => 'Software Developer',
+        'email' => 'sahm1@nku.edu',
+        'phone' => '859-628-1803',
+        'linkedin' => 'https://www.linkedin.com/in/mithsah/',
+        'github' => 'https://github.com/Mithsah1325',
+        'website' => 'http://mithleshsah.tech/',
+        'summary' => 'Northern Kentucky University, Highland Heights, Kentucky: Aug. 2022 to present. Undergraduate in Cyber Security and minoring in Computer Science, GPA 3.34/4.0. Courses: Database Design, Object Oriented Programming, Data Structure & Algorithm, Unix System, Server-Side Programming, Software Design & Architecture. Awards/Honors: International Merit Scholarship, Dean’s List, EDGE award.',
+        'experience' => [
+            [
+                'position' => 'CIS Web Developer',
+                'company' => 'NKU',
+                'time' => '',
+                'description' => '',
+                'technologies' => ['', '', '']
+            ],
+        ],
+        'skills' => [
+            'Python' => 98,
+            'PHP' => 94,
+            'Java' => 96,
+        ],        
+        'other_skills' => [
+            'DevOps', 
+            'Code Review', 
+            'Git', 
+            'Unit Testing', 
+            'Wireframing', 
+            'Sketch', 
+            'Balsamiq', 
+            'WordPress', 
+            'Shopify'
+        ],
+        'education' => [
+            [
+                'degree' => 'BS in Cybersecurity',
+                'institution' => 'Northern Kentucky University',
+                'time' => '2022 - 2026'
+            ],
+        ],
+        'awards' => [
+            'Award 1' => '',
+            'Award 2' => ''
+        ],
+        'languages' => [
+            'English' => 'Intermediate',
+        ],
+        'interests' => ['Sports', 'Hiking', 'Watching movies'],
+        'projects' => [
+            [
+                'title' => 'Project 1',
+                'description' => 'Brief description of Project 1',
+                'link' => 'project1-link'
             ],
         ]
     ],
