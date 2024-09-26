@@ -113,12 +113,14 @@ $team = [
                 'position' => 'Production Assistant',
                 'company' => 'Oak & Moore',
                 'time' => '2023',
-                'description' => '',
+                'description' => 'As production assistant I would help with the productions of bourbon barrel accessories as well as the restoration of bourbon barrels. I would also help attend or deliver items or materials to the workshop or storefront.',
                 'technologies' => ['HTML', 'Maya', 'Blender']
             ],
         ],
         'skills' => [
-            ' ' => 98,
+            'Maya' => 98,
+            'Java' => 94,
+            'Photoshop' => 96,
         ],
         'education' => [
             [
