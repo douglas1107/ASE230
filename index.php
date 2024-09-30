@@ -1,16 +1,25 @@
 <?php
+// Function to calculate age from date of birth
+function calculateAge($dob) {
+    $dob = new DateTime($dob); // Create a DateTime object from date of birth
+    $today = new DateTime('today'); // Get today's date
+    $age = $dob->diff($today)->y; // Calculate the difference in years
+    return $age; // Return the calculated age
+}
+
 $team = [
     [
         'id' => 1,
         'name' => 'Douglas Broughton',
         'image' => 'assets/images/profile.jpg',
         'title' => 'Software Engineer',
+        'dob' => '2002-05-27',
         'email' => 'broughtond1@nku.edu',
         'phone' => '812 209 0264',
         'linkedin' => 'linkedin.com',
         'github' => 'github.com/doug1107',
         'website' => 'db.com',
-        'summary' => 'As a Software Engineering student at NKU, I am passionate about leveraging my technical skills and academic knowledge to develop innovative and effective software solutions. With a strong foundation in programming languages, software development methodologies, and system design, I am adept at analyzing user requirements, designing applications, and implementing efficient code.',
+        'summary' => 'As a Software Engineering student at NKU, I am passionate about leveraging my technical skills...',
         'experience' => [
             [
                 'position' => 'Associate',
@@ -33,8 +42,8 @@ $team = [
             ],
         ],
         'awards' => [
-            'Award 1' => '',
-            'Award 2' => ''
+            'Dean’s List',
+            'Scholarship Winner'
         ],
         'languages' => [
             'English' => 'Native',
@@ -48,25 +57,25 @@ $team = [
             ],
         ]
     ],
-	// fill out the info as you did in your resume, change the id number to a number not taken yet
-	[
-        'id' => 0,
-        'name' => 'Mith Sah',
+    [
+        'id' => 2,
+        'name' => 'Mithlesh Sah',
         'image' => 'assets/images/profile.jpg',
         'title' => 'Software Developer',
+        'dob' => '1997-05-27',
         'email' => 'sahm1@nku.edu',
         'phone' => '859-628-1803',
         'linkedin' => 'https://www.linkedin.com/in/mithsah/',
         'github' => 'https://github.com/Mithsah1325',
         'website' => 'http://mithleshsah.tech/',
-        'summary' => 'Northern Kentucky University, Highland Heights, Kentucky: Aug. 2022 to present. Undergraduate in Cyber Security and minoring in Computer Science, GPA 3.34/4.0. Courses: Database Design, Object Oriented Programming, Data Structure & Algorithm, Unix System, Server-Side Programming, Software Design & Architecture. Awards/Honors: International Merit Scholarship, Dean’s List, EDGE award.',
+        'summary' => 'Undergraduate in Cybersecurity and minoring in Computer Science...',
         'experience' => [
             [
                 'position' => 'CIS Web Developer',
                 'company' => 'NKU',
-                'time' => '',
-                'description' => '',
-                'technologies' => ['', '', '']
+                'time' => '2022 - Present',
+                'description' => 'Developed web applications and improved site performance',
+                'technologies' => ['PHP', 'JavaScript', 'HTML/CSS']
             ],
         ],
         'skills' => [
@@ -82,13 +91,13 @@ $team = [
             ],
         ],
         'awards' => [
-            'Award 1' => '',
-            'Award 2' => ''
+            'International Merit Scholarship',
+            'Dean’s List'
         ],
         'languages' => [
             'English' => 'Intermediate',
         ],
-        'interests' => ['Sports', 'Hiking', 'Watching movies'],
+        'interests' => ['Sports', 'Hiking', 'Movies'],
         'projects' => [
             [
                 'title' => 'Project 1',
@@ -97,68 +106,91 @@ $team = [
             ],
         ]
     ],
-	[
-        'id' => 0,
+    [
+        'id' => 3,
         'name' => 'Camden Bohanan',
         'image' => 'assets/images/profile.jpg',
-        'title' => 'UI/UX',
-        'name' => 'Camden Bohanan',
+        'title' => 'UI/UX Designer',
+        'dob' => '2002-07-10',
         'email' => 'bohananco@gmail.com',
-        'phone' => '',
-        'linkedin' => 'https://linkedin.com/in/',
-        'github' => 'https://github.com/',
-        'website' => 'https://github.com/',
-        'summary' => 'I graduated as part of the class of 2021 from Woodford County High School. I have attended Northern Kentucky University for four years, where I pursued a double major in Software Engineering and Digital Effects. I am experienced in programming languages such as Python and Java. Additionally, I have expertise in digital modeling software, including Blender and Maya, as well as proficiency with Adobe Photoshop and Adobe Illustrator.I have been a proud member of Theta Chi fraternity and the national Alpha-beta club in highschool.',
+        'phone' => '555-123-4567',
+        'linkedin' => 'https://linkedin.com/in/camdenbohanan',
+        'github' => 'https://github.com/camdenbohanan',
+        'website' => 'https://camdenbohanan.dev',
+        'summary' => 'Graduated from Northern Kentucky University, majoring in Software Engineering and Digital Effects...',
         'experience' => [
             [
                 'position' => 'Production Assistant',
                 'company' => 'Oak & Moore',
-                'time' => '',
-                'description' => '',
-                'technologies' => ['', '', '']
+                'time' => '2020 - 2021',
+                'description' => 'Assisted with the production and UX design of digital products',
+                'technologies' => ['Blender', 'Photoshop', 'Adobe Illustrator']
             ],
         ],
         'skills' => [
-            ' ' => 98,
+            'UX Design' => 92,
+            'Photoshop' => 90,
+            'Blender' => 85,
         ],
         'education' => [
             [
-                'degree' => 'Software Engineer Major',
-                'institution' => 'NKU',
-                'time' => ''
+                'degree' => 'BS in Software Engineering',
+                'institution' => 'Northern Kentucky University',
+                'time' => '2017 - 2021'
             ],
         ],
         'awards' => [
-            'Award 1' => '',
-            'Award 2' => ''
+            'Best UX Design Award',
+            'Dean’s List'
         ],
         'languages' => [
-            'English' => '',
+            'English' => 'Native',
         ],
-        'interests' => ['', '', ''],
+        'interests' => ['Digital Art', 'Photography', 'Movies'],
         'projects' => [
             [
-                'title' => '',
-                'description' => '',
-                'link' => ''
+                'title' => 'UX Revamp Project',
+                'description' => 'Revamped the UX design of a high-traffic e-commerce platform',
+                'link' => 'uxrevamp-link'
             ],
         ]
     ],
-
 ];
 
+// Function to display the member card
+function displayMemberCard($member, $index) {
+    $age = calculateAge($member['dob']);
+    
+    echo '
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="' . $member['image'] . '" class="img-fluid rounded-start" alt="' . htmlspecialchars($member['name']) . '">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">' . htmlspecialchars($member['name']) . '</h5>
+                    <p class="card-text">Title: ' . htmlspecialchars($member['title']) . '</p>
+                    <p class="card-text">Email: <a href="mailto:' . htmlspecialchars($member['email']) . '">' . htmlspecialchars($member['email']) . '</a></p>
+                    <p class="card-text">Phone: ' . htmlspecialchars($member['phone']) . '</p>
+                    <p class="card-text">Age: ' . $age . ' years</p>
+                    <a href="detail.php?id=' . $member['id'] . '" class="btn btn-primary">See Full Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    ';
+}
 
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Our amazing team</title>
-    
-    <!-- Meta -->
+    <title>Our Amazing Team</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your name's resume">
+    <meta name="description" content="Team members' profile">
     <meta name="author" content="Your name">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
@@ -166,48 +198,23 @@ $team = [
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     
     <!-- FontAwesome JS-->
-	<script defer src="assets/fontawesome/js/all.min.js"></script>
-       
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
-
-
 </head> 
 
 <body>
     <article class="resume-wrapper text-center position-relative">
-	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
-			<h1 class="py-4 text-center">OUR AMAZING TEAM</h1>
-
-			<?php foreach ($team as $member) { ?>
-		    <header class="resume-header pt-4 pt-md-0">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src= "<?= $member['image']; ?>" alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?= $member['name']; ?></h1>
-							    <div class="title mb-3"><?= $member['title']; ?></div>
-								<a href="detail.php?id=<?= array_search($member, $team); ?>" class="btn btn-secondary">See full profile</a>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>
-			<?php } ?>
-
-    
-    <footer class="footer text-center pt-2 pb-5">
-	    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-        <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Your names</small>
-    </footer>
-
-    
-
+        <div class="container mt-5">
+            <h1 class="mb-4">Our Team</h1>
+            <?php
+            // Loop through each team member and display their card
+            foreach ($team as $index => $member) {
+                displayMemberCard($member, $index);
+            }
+            ?>
+        </div>
+    </article>
 </body>
-</html> 
+</html>
