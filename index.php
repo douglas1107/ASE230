@@ -7,7 +7,9 @@ function calculateAge($dob) {
     return $age; // Return the calculated age
 }
 
+// Team member data
 $team = [
+    // First member
     [
         'id' => 1,
         'name' => 'Douglas Broughton',
@@ -41,13 +43,8 @@ $team = [
                 'time' => '2021 - 2025'
             ],
         ],
-        'awards' => [
-            'Dean’s List',
-            'Scholarship Winner'
-        ],
-        'languages' => [
-            'English' => 'Native',
-        ],
+        'awards' => ['Dean’s List', 'Scholarship Winner'],
+        'languages' => ['English' => 'Native'],
         'interests' => ['Sports', 'Chess', 'Watching movies'],
         'projects' => [
             [
@@ -57,6 +54,7 @@ $team = [
             ],
         ]
     ],
+    // Second member (Mithlesh Sah)
     [
         'id' => 2,
         'name' => 'Mithlesh Sah',
@@ -90,13 +88,8 @@ $team = [
                 'time' => '2022 - 2026'
             ],
         ],
-        'awards' => [
-            'International Merit Scholarship',
-            'Dean’s List'
-        ],
-        'languages' => [
-            'English' => 'Intermediate',
-        ],
+        'awards' => ['International Merit Scholarship', 'Dean’s List'],
+        'languages' => ['English' => 'Intermediate'],
         'interests' => ['Sports', 'Hiking', 'Movies'],
         'projects' => [
             [
@@ -106,6 +99,7 @@ $team = [
             ],
         ]
     ],
+    // Third member
     [
         'id' => 3,
         'name' => 'Camden Bohanan',
@@ -139,13 +133,8 @@ $team = [
                 'time' => '2017 - 2021'
             ],
         ],
-        'awards' => [
-            'Best UX Design Award',
-            'Dean’s List'
-        ],
-        'languages' => [
-            'English' => 'Native',
-        ],
+        'awards' => ['Best UX Design Award', 'Dean’s List'],
+        'languages' => ['English' => 'Native'],
         'interests' => ['Digital Art', 'Photography', 'Movies'],
         'projects' => [
             [
@@ -183,6 +172,7 @@ function displayMemberCard($member, $index) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
