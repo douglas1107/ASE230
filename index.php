@@ -1,12 +1,13 @@
 <?php
 $team = [
     [
-        'id' => 1,
+        'id' => 0,
         'name' => 'Douglas Broughton',
         'image' => 'assets/images/profile.jpg',
         'title' => 'Software Engineer',
         'email' => 'broughtond1@nku.edu',
         'phone' => '812 209 0264',
+        'dob' => '2002-11-07',
         'linkedin' => 'linkedin.com',
         'github' => 'github.com/doug1107',
         'website' => 'db.com',
@@ -58,12 +59,13 @@ $team = [
     ],
 	// fill out the info as you did in your resume, change the id number to a number not taken yet
 	[
-        'id' => 2,
+        'id' => 1,
         'name' => 'Sean Cancel',
         'image' => 'https://media.licdn.com/dms/image/v2/D4E03AQFrLIvKRTVQxA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687800424400?e=1732752000&v=beta&t=DJjiZOJcg-9XbrkmY0qj-0gXkTXwK6PHgdIuZpNMeFQ',
         'title' => 'Cybersecurity Intern',
         'email' => 'cancels1@mymail.nku.edu',
         'phone' => '502 500 8688',
+        'dob' => '2004-07-1',
         'linkedin' => 'www.linkedin.com/in/seancancel',
         'github' => 'https://github.com/cancels1',
         'website' => 'sc.com',
@@ -117,12 +119,13 @@ $team = [
         ]
     ],
 	[
-        'id' => 3,
+        'id' => 2,
         'name' => 'Camden Bohanan',
         'image' => 'assets/images/profile.jpg',
         'title' => 'Junior Developer',
         'email' => 'bohananco@gmail.com',
         'phone' => '859-753-4122',
+        'dob' => '2002-11-22',
         'linkedin' => 'https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin',
         'github' => 'https://github.com/CamdenBohanan',
         'website' => 'cb.com',
@@ -174,12 +177,13 @@ $team = [
         ]
     ],
     [
-        'id' => 4,
+        'id' => 3,
         'name' => 'Mith Sah',
         'image' => 'assets/images/profile.jpg',
         'title' => 'Software Developer',
         'email' => 'sahm1@nku.edu',
         'phone' => '859-628-1803',
+        'dob' => '2002-07-10',
         'linkedin' => 'https://www.linkedin.com/in/mithsah/',
         'github' => 'https://github.com/Mithsah1325',
         'website' => 'http://mithleshsah.tech/',
@@ -234,7 +238,36 @@ $team = [
     ],
 
 ];
+function displayMemberCard($member, $index) {
+    $age = calculateAge($member['dob']);
+    
+    echo '
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="' . $member['image'] . '" class="img-fluid rounded-start" alt="' . htmlspecialchars($member['name']) . '">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">' . htmlspecialchars($member['name']) . '</h5>
+                    <p class="card-text">Title: ' . htmlspecialchars($member['title']) . '</p>
+                    <p class="card-text">Email: <a href="mailto:' . htmlspecialchars($member['email']) . '">' . htmlspecialchars($member['email']) . '</a></p>
+                    <p class="card-text">Phone: ' . htmlspecialchars($member['phone']) . '</p>
+                    <p class="card-text">Age: ' . $age . ' years</p>
+                    <a href="detail.php?id=' . $member['id'] . '" class="btn btn-primary">See Full Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    ';
+}
 
+function calculateAge($dob) {
+    $birthDate = new DateTime($dob);
+    $today = new DateTime('today');
+    $age = $birthDate->diff($today)->y;
+    return $age;
+}
 
 ?>
 <!DOCTYPE html>
@@ -264,39 +297,18 @@ $team = [
 
 <body>
     <article class="resume-wrapper text-center position-relative">
-	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
-			<h1 class="py-4 text-center">OUR AMAZING TEAM</h1>
-
-			<?php foreach ($team as $member) { ?>
-		    <header class="resume-header pt-4 pt-md-0">
-			    <div class="row">
-				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src= "<?= $member['image']; ?>" alt="">
-				    </div><!--//col-->
-				    <div class="col">
-					    <div class="row p-4 justify-content-center justify-content-md-between">
-						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?= $member['name']; ?></h1>
-							    <div class="title mb-3"><?= $member['title']; ?></div>
-								<a href="detail.php?id=<?= array_search($member, $team); ?>" class="btn btn-secondary">See full profile</a>
-						    </div><!--//primary-info-->
-						    <div class="secondary-info col-auto mt-2">
-						    </div><!--//secondary-info-->
-					    </div><!--//row-->
-					    
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </header>
-			<?php } ?>
-
-    
-    <footer class="footer text-center pt-2 pb-5">
-	    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-        <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Your names</small>
-    </footer>
-
-    
-
+        <div class="container mt-5">
+            <h1 class="mb-4">Our Team</h1>
+            <?php
+            foreach ($team as $index => $member) {
+                displayMemberCard($member, $index);
+            }
+            ?>
+        </div>
+        <footer class="footer text-center pt-2 pb-5">
+            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a class="text-link" href="https://www.website.com" target="_blank">Our Team</a></small>
+        </footer>
+    </article>
 </body>
 </html> 
 

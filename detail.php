@@ -1,12 +1,13 @@
 <?php
 $team = [
     [
-        'id' => 1,
+        'id' => 0,
         'name' => 'Douglas Broughton',
         'image' => 'assets/images/profile.jpg',
         'title' => 'Software Engineer',
         'email' => 'broughtond1@nku.edu',
         'phone' => '812 209 0264',
+		'dob' => '2002-11-07',
         'linkedin' => 'linkedin.com',
         'github' => 'github.com/doug1107',
         'website' => 'db.com',
@@ -58,12 +59,13 @@ $team = [
     ],
 	// fill out the info as you did in your resume, change the id number to a number not taken yet
 	[
-        'id' => 2,
+        'id' => 1,
         'name' => 'Sean Cancel',
         'image' => 'https://media.licdn.com/dms/image/v2/D4E03AQFrLIvKRTVQxA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687800424400?e=1732752000&v=beta&t=DJjiZOJcg-9XbrkmY0qj-0gXkTXwK6PHgdIuZpNMeFQ',
         'title' => 'Cybersecurity Intern',
         'email' => 'cancels1@mymail.nku.edu',
         'phone' => '502 500 8688',
+		'dob' => '2004-07-1',
         'linkedin' => 'www.linkedin.com/in/seancancel',
         'github' => 'https://github.com/cancels1',
         'website' => 'sc.com',
@@ -117,12 +119,13 @@ $team = [
         ]
     ],
 	[
-        'id' => 3,
+        'id' => 2,
         'name' => 'Camden Bohanan',
         'image' => 'assets/images/profile.jpg',
         'title' => 'Junior Developer',
         'email' => 'bohananco@gmail.com',
         'phone' => '859-753-4122',
+		'dob' => '2002-11-22',
         'linkedin' => 'https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin',
         'github' => 'https://github.com/CamdenBohanan',
         'website' => 'cb.com',
@@ -174,12 +177,13 @@ $team = [
         ]
     ],
 	[
-	'id' => 4,
+	'id' => 3,
 	'name' => 'Mith Sah',
 	'image' => 'assets/images/profile.jpg',
 	'title' => 'Software Developer',
 	'email' => 'sahm1@nku.edu',
 	'phone' => '859-628-1803',
+	'dob' => '2002-07-10',
 	'linkedin' => 'https://www.linkedin.com/in/mithsah/',
 	'github' => 'https://github.com/Mithsah1325',
 	'website' => 'http://mithleshsah.tech/',
@@ -235,8 +239,32 @@ $team = [
 
 
 ];
+function displayExperience($experience) {
+    ?>
+    <div class="resume-timeline">
+        <div class="resume-timeline-item card mb-4">
+            <div class="card-body">
+                <h4 class="resume-position text-uppercase font-weight-bold d-flex align-items-center">
+                    <i class="fas fa-briefcase me-2"></i>
+                    <?= htmlspecialchars($experience['position']); ?>
+                </h4>
+                <div class="resume-company font-weight-bold"><?= htmlspecialchars($experience['company']); ?></div>
+                <div class="resume-time text-muted"><?= htmlspecialchars($experience['time']); ?></div>
+                <p class="mt-2"><?= htmlspecialchars($experience['description']); ?></p>
+                <p><strong>Technologies: </strong><?= htmlspecialchars(implode(', ', $experience['technologies'])); ?></p>
+            </div>
+        </div>
+    </div>
+    <?php
+}
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 $member = isset($team[$id]) ? $team[$id] : null;
+function calculateAge($dob) {
+    $birthDate = new DateTime($dob);
+    $today = new DateTime('today');
+    $age = $birthDate->diff($today)->y;
+    return $age;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
@@ -277,8 +305,9 @@ $member = isset($team[$id]) ? $team[$id] : null;
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
 							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?= $member['name']; ?></h1>
-							    <div class="title mb-3"><?= $member['title']; ?>e</div>
+							    <div class="title mb-3"><?= $member['title']; ?></div>
 							    <ul class="list-unstyled">
+								<p class="card-text">Age: <?= calculateAge($member['dob']); ?></p>
 								    <li class="mb-2"><a class="text-link" href="mailto:<?= $member['email']; ?>"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i><?= $member['email']; ?></a></li>
 								    <li><a class="text-link" href=""tel:<?= $member['phone']; ?>><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i><?= $member['phone']; ?></a></li>
 							    </ul>
@@ -302,42 +331,16 @@ $member = isset($team[$id]) ? $team[$id] : null;
 					    <p class="mb-0"><?= $member['summary']; ?></p>
 				    </div>
 			    </section><!--//summary-section-->
-			    <div class="row">
-				    <div class="col-lg-9">
-					    <section class="resume-section experience-section mb-5">
-						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
-						    <div class="resume-section-content">
-							    <div class="resume-timeline position-relative">
-								<?php foreach ($member['experience'] as $exp): ?>
-								    <article class="resume-timeline-item position-relative pb-5">
-									    
-									    <div class="resume-timeline-item-header mb-2">
-										    <div class="d-flex flex-column flex-md-row">
-										        <h3 class="resume-position-title font-weight-bold mb-1"><?= htmlspecialchars($exp['position']); ?></h3>
-										        <div class="resume-company-name ms-auto"><?= htmlspecialchars($exp['company']); ?></div>
-										    </div><!--//row-->
-										    <div class="resume-position-time"><?= htmlspecialchars($exp['time']); ?></div>
-									    </div><!--//resume-timeline-item-header-->
-									    <div class="resume-timeline-item-desc">
-										    <p><?= htmlspecialchars($exp['description']); ?></p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-										    <ul class="list-inline">
-												<?php foreach ($exp['technologies'] as $tech): ?>
-                                                    <li class="list-inline-item"><span class="badge bg-secondary badge-pill"><?= htmlspecialchars($tech); ?></span></li>
-                                                <?php endforeach; ?>
-										    </ul>
-									    </div><!--//resume-timeline-item-desc-->
 
-								    </article>
-									<?php endforeach; ?>
-							    
-							    
-							    
-							    
-							    
-						    </div>
-					    </section><!--//projects-section-->
-				    </div>
+				<section class="resume-section experience-section mb-5">
+    				<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Experience</h2>
+    					<div class="resume-section-content">
+        					<?php foreach ($member['experience'] as $experience) {
+            					displayExperience($experience);
+        					} ?>
+    					</div>
+				</section>
+
 				    <div class="col-lg-3">
 					    <section class="resume-section skills-section mb-5">
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
