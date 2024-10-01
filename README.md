@@ -1,4 +1,4 @@
-# ASE 230 HW2
+# ASE 230 HW3
 
 ## Douglas Broughton, Sean Cancel, Camben Bohanan, Mith Sah
 
