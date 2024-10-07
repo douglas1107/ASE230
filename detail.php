@@ -25,6 +25,14 @@ $team = [
             'PHP' => 94,
             'Java' => 96,
         ],
+		'other_skills' => [
+            'Code Review', 
+            'Git', 
+            'Unit Testing', 
+            'Teamwork', 
+            'Swift', 
+            'Communication', 
+        ],
         'education' => [
             [
                 'degree' => 'BS in Applied Software Engineering',
@@ -33,11 +41,11 @@ $team = [
             ],
         ],
         'awards' => [
-            'Award 1' => '',
-            'Award 2' => ''
+            'Alter Award' => 'Award of exellence in my fraternity chapter',
         ],
         'languages' => [
             'English' => 'Native',
+			'Spanish' => 'Beginner: A1',
         ],
         'interests' => ['Sports', 'Chess', 'Watching movies'],
         'projects' => [
@@ -74,6 +82,17 @@ $team = [
             'Organization' => 94,
             'Problem Response' => 96,
         ],
+		'other_skills' => [
+            'DevOps', 
+            'Code Review', 
+            'Git', 
+            'Unit Testing', 
+            'Wireframing', 
+            'Sketch', 
+            'Balsamiq', 
+            'WordPress', 
+            'Shopify'
+        ],
         'education' => [
             [
                 'degree' => 'Bachelor of Science - Cybersecurity',
@@ -98,33 +117,44 @@ $team = [
         ]
     ],
 	[
-        'id' => 0,
-        'name' => '',
+        'id' => 3,
+        'name' => 'Camden Bohanan',
         'image' => 'assets/images/profile.jpg',
-        'title' => '',
-        'email' => '',
-        'phone' => '',
-        'linkedin' => '',
-        'github' => '',
-        'website' => '',
-        'summary' => '',
+        'title' => 'Junior Developer',
+        'email' => 'bohananco@gmail.com',
+        'phone' => '859-753-4122',
+        'linkedin' => 'https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin',
+        'github' => 'https://github.com/CamdenBohanan',
+        'website' => 'cb.com',
+        'summary' => 'I graduated as part of the class of 2021 from Woodford County High School. I have attended Northern Kentucky University for four years, where I pursued a double major in Software Engineering and Digital Effects. I am experienced in programming languages such as Python and Java. Additionally, I have expertise in digital modeling software, including Blender and Maya, as well as proficiency with Adobe Photoshop and Adobe Illustrator.I have been a proud member of Theta Chi fraternity and the national Alpha-beta club in highschool.',
         'experience' => [
             [
-                'position' => '',
-                'company' => '',
-                'time' => '',
+                'position' => 'Production Assistant',
+                'company' => 'Oak & Moore',
+                'time' => '2023',
                 'description' => '',
-                'technologies' => ['', '', '']
+                'technologies' => ['HTML', 'Maya', 'Blender']
             ],
         ],
         'skills' => [
             ' ' => 98,
         ],
+		 'other_skills' => [
+            'DevOps', 
+            'Code Review', 
+            'Git', 
+            'Unit Testing', 
+            'Wireframing', 
+            'Sketch', 
+            'Balsamiq', 
+            'WordPress', 
+            'Shopify'
+        ],
         'education' => [
             [
-                'degree' => '',
-                'institution' => '',
-                'time' => ''
+                'degree' => 'BS Software Engineering',
+                'institution' => 'Northern Kentucky University',
+                'time' => '2021-2026'
             ],
         ],
         'awards' => [
@@ -134,15 +164,75 @@ $team = [
         'languages' => [
             'English' => '',
         ],
-        'interests' => ['', '', ''],
+        'interests' => ['Painting', 'Hiking', 'Reading'],
         'projects' => [
             [
-                'title' => '',
-                'description' => '',
-                'link' => ''
+                'title' => 'Road to Iowa',
+                "description' => 'In Roads to Iowa, a rebellious punk star and an up-and-coming hip-hop artist are forced to team up for a cross-country journey to Iowa. Along the way, they must navigate their clashing personalities and musical styles while facing eccentric fans, unexpected detours, and wild adventures. As they travel from city to city, they discover each other's worlds and find common ground. Will their road trip end in harmony, or will their differences derail their journey?",
+                'link' => 'RTI.com'
             ],
         ]
     ],
+	[
+	'id' => 4,
+	'name' => 'Mith Sah',
+	'image' => 'assets/images/profile.jpg',
+	'title' => 'Software Developer',
+	'email' => 'sahm1@nku.edu',
+	'phone' => '859-628-1803',
+	'linkedin' => 'https://www.linkedin.com/in/mithsah/',
+	'github' => 'https://github.com/Mithsah1325',
+	'website' => 'http://mithleshsah.tech/',
+	'summary' => 'Northern Kentucky University, Highland Heights, Kentucky: Aug. 2022 to present. Undergraduate in Cyber Security and minoring in Computer Science, GPA 3.34/4.0. Courses: Database Design, Object Oriented Programming, Data Structure & Algorithm, Unix System, Server-Side Programming, Software Design & Architecture. Awards/Honors: International Merit Scholarship, Dean’s List, EDGE award.',
+	'experience' => [
+		[
+			'position' => 'CIS Web Developer',
+			'company' => 'NKU',
+			'time' => '',
+			'description' => '',
+			'technologies' => ['', '', '']
+		],
+	],
+	'skills' => [
+		'Python' => 98,
+		'PHP' => 94,
+		'Java' => 96,
+	],        
+	'other_skills' => [
+		'DevOps', 
+		'Code Review', 
+		'Git', 
+		'Unit Testing', 
+		'Wireframing', 
+		'Sketch', 
+		'Balsamiq', 
+		'WordPress', 
+		'Shopify'
+	],
+	'education' => [
+		[
+			'degree' => 'BS in Cybersecurity',
+			'institution' => 'Northern Kentucky University',
+			'time' => '2022 - 2026'
+		],
+	],
+	'awards' => [
+		'Award 1' => '',
+		'Award 2' => ''
+	],
+	'languages' => [
+		'English' => 'Intermediate',
+	],
+	'interests' => ['Sports', 'Hiking', 'Watching movies'],
+	'projects' => [
+		[
+			'title' => 'Project 1',
+			'description' => 'Brief description of Project 1',
+			'link' => 'project1-link'
+		],
+	]
+],
+
 
 ];
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
@@ -254,51 +344,19 @@ $member = isset($team[$id]) ? $team[$id] : null;
 						    <div class="resume-section-content">
 						        <div class="resume-skill-item">
 							        <ul class="list-unstyled mb-4">
+									<?php foreach ($member['skills'] as $skill => $level): ?>
 								        <li class="mb-2">
-								            <div class="resume-skill-name">Angular</div>
+								            <div class="resume-skill-name"><?= htmlspecialchars($skill); ?></div>
 									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">React</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 94%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">JavaScript</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 96%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Node.js</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 92%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">HTML/CSS/SASS/LESS</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 96%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
+										<?php endforeach; ?>
 							        </ul>
 						        </div><!--//resume-skill-item-->
 						        <div class="resume-skill-item">
 						            <h4 class="resume-skills-cat font-weight-bold">Others</h4>
 						            <ul class="list-inline">
-							            <li class="list-inline-item"><span class="badge badge-light">DevOps</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Code Review</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Git</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Unit Testing</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Wireframing</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Sketch</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Balsamiq</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">WordPress</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Shopify</span></li>
+									<?php foreach ($member['other_skills'] as $skill): ?>
+							            <li class="list-inline-item"><span class="badge badge-light"><?= htmlspecialchars($skill); ?></span></li>
+										<?php endforeach; ?>
 						            </ul>
 						        </div><!--//resume-skill-item-->
 						    </div><!--resume-section-content-->
@@ -307,16 +365,13 @@ $member = isset($team[$id]) ? $team[$id] : null;
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
 						    <div class="resume-section-content">
 							    <ul class="list-unstyled">
+								<?php foreach ($member['education'] as $edu): ?>
 								    <li class="mb-2">
-								        <div class="resume-degree font-weight-bold">MSc in Computer Science</div>
-								        <div class="resume-degree-org">University College London</div>
-								        <div class="resume-degree-time">2013 - 2014</div>
+								        <div class="resume-degree font-weight-bold"><?= htmlspecialchars($edu['degree']); ?></div>
+								        <div class="resume-degree-org"><?= htmlspecialchars($edu['institution']); ?></div>
+								        <div class="resume-degree-time"><?= htmlspecialchars($edu['time']); ?></div>
 								    </li>
-								    <li>
-								        <div class="resume-degree font-weight-bold">BSc Maths and Physics</div>
-								        <div class="resume-degree-org">Imperial College London</div>
-								        <div class="resume-degree-time">2010 - 2013</div>
-								    </li>
+									<?php endforeach; ?>
 							    </ul>
 						    </div>
 					    </section><!--//education-section-->
@@ -324,16 +379,13 @@ $member = isset($team[$id]) ? $team[$id] : null;
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Awards</h2>
 						    <div class="resume-section-content">
 							    <ul class="list-unstyled resume-awards-list">
+								<?php foreach ($member['awards'] as $award => $desc): ?>
 								    <li class="mb-2 ps-4 position-relative">
 								        <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-								        <div class="resume-award-name">Award Name Lorem</div>
-								        <div class="resume-award-desc">Award desc goes here, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.</div>
+								        <div class="resume-award-name"><?= htmlspecialchars($award); ?></div>
+								        <div class="resume-award-desc"><?= htmlspecialchars($desc); ?></div>
 								    </li>
-								    <li class="mb-0 ps-4 position-relative">
-								        <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-								        <div class="resume-award-name">Award Name Ipsum</div>
-								        <div class="resume-award-desc">Award desc goes here, ultricies nec, pellentesque.</div>
-								    </li>
+									<?php endforeach; ?>
 							    </ul>
 						    </div>
 					    </section><!--//interests-section-->
@@ -341,9 +393,9 @@ $member = isset($team[$id]) ? $team[$id] : null;
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Languages</h2>
 						    <div class="resume-section-content">
 							    <ul class="list-unstyled resume-lang-list">
-								    <li class="mb-2"><span class="resume-lang-name font-weight-bold">English</span> <small class="text-muted font-weight-normal">(Native)</small></li>
-								    <li class="mb-2 align-middle"><span class="resume-lang-name font-weight-bold">French</span> <small class="text-muted font-weight-normal">(Professional)</small></li>
-								    <li><span class="resume-lang-name font-weight-bold">Spanish</span> <small class="text-muted font-weight-normal">(Professional)</small></li>
+								<?php foreach ($member['languages'] as $language => $proficiency): ?>
+								    <li class="mb-2"><span class="resume-lang-name font-weight-bold"><?= htmlspecialchars($language); ?></span> <small class="text-muted font-weight-normal">(<?= htmlspecialchars($proficiency); ?>)</small></li>
+									<?php endforeach; ?>
 							    </ul>
 						    </div>
 					    </section><!--//language-section-->
@@ -351,9 +403,9 @@ $member = isset($team[$id]) ? $team[$id] : null;
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
 						    <div class="resume-section-content">
 							    <ul class="list-unstyled">
-								    <li class="mb-1">Climbing</li>
-								    <li class="mb-1">Snowboarding</li>
-								    <li class="mb-1">Cooking</li>
+								<?php foreach ($member['interests'] as $interest): ?>
+								    <li class="mb-1"><?= htmlspecialchars($interest); ?></li>
+									<?php endforeach; ?>
 							    </ul>
 						    </div>
 					    </section><!--//interests-section-->
@@ -363,41 +415,21 @@ $member = isset($team[$id]) ? $team[$id] : null;
 				<section class="resume-section experience-section mb-5">
 					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Projects</h2>
 					<div class="row mt-4">
+					<?php foreach ($member['projects'] as $project): ?>
 						<div class="col-md-4">
 							<div class="card">
 								<img src="path-to-project-image1.jpg" alt="Project 1" class="card-img-top">
 								<div class="card-body">
-									<h5 class="card-title">Project 1</h5>
-									<p class="card-text">Brief description of Project 1.</p>
-									<a href="btn btn-outline-primary" href="#">Go to link</a>
+									<h5 class="card-title"><?= htmlspecialchars($project['title']); ?></h5>
+									<p class="card-text"><?= htmlspecialchars($project['description']); ?></p>
+									<a href="btn btn-outline-primary" href="<?= htmlspecialchars($project['link']); ?>"></a>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="card">
-								<img src="path-to-project-image2.jpg" alt="Project 2" class="card-img-top">
-								<div class="card-body">
-									<h5 class="card-title">Project 2</h5>
-									<p class="card-text">Brief description of Project 2.</p>
-									<a href="btn btn-outline-primary" href="#">Go to link</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="card">
-								<img src="path-to-project-image3.jpg" alt="Project 3" class="card-img-top">
-								<div class="card-body">
-									<h5 class="card-title">Project 3</h5>
-									<p class="card-text">Brief description of Project 3.</p>
-									<a href="btn btn-outline-primary" href="#">Go to link</a>
-								</div>
-							</div>
-						</div>
+						<?php endforeach; ?>
 					</div>
 				</section><!--//projects-section-->
 		    </div><!--//resume-body-->
-		    
-		    
 	    </div>
     </article> 
 
